@@ -17,7 +17,7 @@ import java.util.UUID;
 
 
 public class Axolotlclient implements ClientModInitializer {
-
+	
 	public static final AxolotlclientConfig CONFIG = OmegaConfig.register(AxolotlclientConfig.class);
 
 	@Override
@@ -47,7 +47,7 @@ public class Axolotlclient implements ClientModInitializer {
 	public static boolean isUsingClient(UUID uuid){
 		if (uuid == MinecraftClient.getInstance().player.getUuid()){
 			return true;
-		} else if (){
+		} else if (NetworkHelper.GetOnline(uuid)){
 
 		}
 

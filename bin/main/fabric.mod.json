@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "axolotlclient",
+	"version": "${version}",
+
+	"name": "AxolotlClient-Branding",
+	"description": "Special features of AxolotlClient",
+	"authors": ["moehreag", "Parts included by LoganDark"],
+	"contact": {
+		"sources": "https://github.com/moehreag/AxolotlClient-branding",
+		"homepage": "https://github.com/moehreag/AxolotlClient",
+		"issues": "https://github.com/moehreag/AxolotlClient-branding/issues"
+	},
+
+	"custom": {
+		"modmenu": {
+			"discord": "https://discord.gg/9Q3brQVQZN"
+		}
+	},
+
+	"license": "GPLv3+",
+	"icon": "assets/branding/icon.png",
+
+	"environment": "client",
+	"entrypoints": {
+		"client": ["io.github.moehreag.branding.Axolotlclient"]
+	},
+
+	"mixins": ["branding.mixins.json"],
+
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "1.18.x"
+	},
+	"conflicts": {
+		"wurst": "*",
+		"meteor-client": "*",
+		"optifabric": "*"
+	},
+	"suggests": {}
+}

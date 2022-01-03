@@ -5,6 +5,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.UUID;
+
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
@@ -67,7 +69,7 @@ public class NetworkHelper {
 
 		System.out.println("*** Sending GET ***");
 
-		String url = "http://moehreag.duckdns.org";
+		String url = "http://moehreag.duckdns.org:5000";
 		HttpsURLConnection client = getHttpsClient(url);
 
 		int responseCode = client.getResponseCode();
@@ -95,7 +97,7 @@ public class NetworkHelper {
 	private void Post() throws Exception {
 
 		System.out.println("*** Sending Http POST ***");
-		String url = "https://moehreag.duckdns.org";
+		String url = "https://moehreag.duckdns.org:5000";
 		String urlParameters = "param1=a&param2=b&param3=c";
 		byte[] postData = urlParameters.getBytes(StandardCharsets.UTF_8);
 		int postDataLength = postData.length;
@@ -140,9 +142,16 @@ public class NetworkHelper {
 		}
 
 	}
-
-
-
+	public static boolean GetOnline(UUID uuid){
+		 if (){
+			return  true;
+		}
+		else {
+			return false;
+		}
+		
+	}
+	
 	public static void main(String[] args) throws Exception {
 
 		NetworkHelper obj = new NetworkHelper();
@@ -151,6 +160,5 @@ public class NetworkHelper {
 
 		obj.Post();
 
-	}
-
+	}	
 }
